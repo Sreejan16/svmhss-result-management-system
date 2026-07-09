@@ -1,3 +1,5 @@
+import { db } from "./firebase.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 // =====================================
 // SVMHSS RESULT MANAGEMENT SYSTEM
 // Version 3.0
@@ -206,6 +208,13 @@ result
 if(editIndex==-1){
 
 exams.push(resultData);
+addDoc(collection(db, "results"), resultData)
+.then(() => {
+    console.log("Saved to Firebase");
+})
+.catch((error) => {
+    console.error("Firebase Error:", error);
+});
 
 }
 

@@ -1,15 +1,40 @@
+import { db } from "./firebase.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 // =====================================
 // SVMHSS Student Result Portal
 // =====================================
 
 // Load all saved results
-let exams = JSON.parse(localStorage.getItem("svmhssExams")) || [];
+let exams = [];
+
+async function loadResultsFromFirebase() {
+
+    const querySnapshot = await getDocs(collection(db, "results"));
+
+    querySnapshot.forEach((doc) => {
+
+        exams.push(doc.data());
+
+    });
+
+}
+
+loadResultsFromFirebase();
 
 const viewResultBtn = document.getElementById("viewResultBtn");
 
 if (viewResultBtn) {
 
-    viewResultBtn.addEventListener("click", function () {
+viewResultBtn.addEventListener("click", async function () {
+
+    if (exams.length === 0) {
+
+        await loadResultsFromFirebase();
+
+    }
+
+    const registerNumber =
+    document.getElementById("viewRegister").value.trim();
 
         const registerNumber =
         document.getElementById("viewRegister").value.trim();
