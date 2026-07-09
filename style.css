@@ -1,0 +1,537 @@
+/* ======================================
+   SVMHSS RESULT MANAGEMENT SYSTEM
+   Main Stylesheet
+====================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef3fb;
+    color: #333;
+}
+/* ===== Header ===== */
+
+.header {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: white;
+    color: #0b3d91;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.school-details h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.school-details p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+/* ===== Main Container ===== */
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+
+/* ===== Login Card ===== */
+
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #0b3d91;
+    margin-bottom: 20px;
+}
+
+.login-card hr {
+    margin: 30px 0;
+}
+/* ===== Input Fields ===== */
+
+.login-card input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.login-card input:focus {
+    border-color: #0b3d91;
+}
+/* ===== Buttons ===== */
+
+.login-card button {
+    width: 100%;
+    padding: 15px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.login-card button:hover {
+    background: #084298;
+}
+/* ===== Footer ===== */
+
+.footer {
+    background: #0b3d91;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+/* ===== Mobile Responsive ===== */
+
+@media (max-width: 768px) {
+
+    .school-details h1 {
+        font-size: 22px;
+    }
+
+    .school-details p {
+        font-size: 15px;
+    }
+
+    .login-card {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+/* ===== Dashboard Welcome ===== */
+
+.dashboard-welcome {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.dashboard-welcome h2 {
+    color: #0b3d91;
+    margin-bottom: 10px;
+}
+
+.dashboard-welcome p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* ===== Dashboard Cards ===== */
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===== Dashboard Action Buttons ===== */
+
+.dashboard-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.dashboard-actions button {
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 180px;
+    transition: 0.3s;
+}
+
+.dashboard-actions button:hover {
+    background: #084298;
+}
+
+/* Results Table */
+
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+#resultsTable th {
+
+    background-color: #1e3a8a;
+    color: white;
+    padding: 12px;
+    text-align: center;
+
+}
+
+
+#resultsTable td {
+
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+#resultsTable tr:hover {
+
+    background-color: #f1f5f9;
+
+}
+
+
+/* Action Buttons */
+
+button {
+
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    opacity: 0.8;
+
+}
+
+/* Professional Marksheet */
+
+.marksheet {
+
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+.marksheet-header {
+
+    text-align: center;
+
+}
+
+
+.student-details,
+.marks-table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+
+.student-details td,
+.marks-table td,
+.marks-table th {
+
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+.marks-table th {
+
+    background: #0b3d91;
+    color: white;
+
+}
+
+
+.result-summary {
+
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #333;
+
+}
+
+
+.signature {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+
+}
+
+/* ===== Student Result Card ===== */
+
+.student-result-card {
+
+    max-width: 850px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+}
+
+.student-result-card h2 {
+
+    text-align: center;
+    color: #0b3d91;
+    margin-bottom: 20px;
+
+}
+
+.student-result-card input {
+
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+}
+
+.student-result-card button {
+
+    width: 100%;
+    padding: 12px;
+    background: #0b5ed7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.student-result-card button:hover {
+
+    background: #084298;
+
+}
+
+#marksheet {
+
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+}
+
+#marksheet table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+#marksheet th {
+
+    background: #0b3d91;
+    color: white;
+    padding: 10px;
+
+}
+
+#marksheet td {
+
+    padding: 10px;
+    text-align: center;
+
+}
+
+#marksheet tr:nth-child(even){
+
+    background:#f5f7fb;
+
+}
+/* ======================================
+   Mobile & Tablet Responsive
+====================================== */
+
+@media (max-width: 768px) {
+
+    .header h1 {
+
+        font-size: 22px;
+
+    }
+
+    .header h2 {
+
+        font-size: 16px;
+
+    }
+
+    .dashboard-actions {
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .dashboard-actions button {
+
+        width: 100%;
+
+        max-width: 350px;
+
+    }
+
+    .student-result-card {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+
+    .result-entry {
+
+        width: 95%;
+
+        margin: auto;
+
+    }
+
+    input,
+    select,
+    button {
+
+        width: 100%;
+
+    }
+
+    #resultsTable {
+
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+
+    }
+
+}
+/* ===== Premium Marksheet ===== */
+
+#marksheet {
+
+    margin-top: 25px;
+    border-radius: 12px;
+    border: 2px solid #0b3d91;
+    background: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    overflow: hidden;
+
+}
+
+#marksheet table {
+
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+#marksheet th {
+
+    background: #0b3d91;
+    color: white;
+    padding: 12px;
+    width: 40%;
+
+}
+
+#marksheet td {
+
+    padding: 12px;
+
+}
+
+#marksheet tr:nth-child(even){
+
+    background:#f8f9fc;
+
+}
+
+#marksheet img{
+
+    display:block;
+    margin:auto;
+
+}

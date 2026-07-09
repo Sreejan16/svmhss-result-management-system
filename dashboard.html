@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+
+if (localStorage.getItem("adminLoggedIn") !== "true") {
+
+    window.location.href = "login.html";
+
+}
+
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SVMHSS Result Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+    <div class="logo">
+        LOGO
+    </div>
+
+    <div class="school-details">
+        <h1>Sri Venkateshwara Matriculation Higher Secondary School</h1>
+        <p>Admin Dashboard</p>
+    </div>
+</header>
+<section class="dashboard-welcome">
+    <h2>Welcome, Sreejan</h2>
+    <p>Manage mock examination results from your dashboard.</p>
+</section>
+
+<section class="dashboard-cards">
+
+    <div class="card">
+        <h3>Total Students</h3>
+        <p id="totalStudents">1</p>
+    </div>
+
+    <div class="card">
+        <h3>Total Exams</h3>
+        <p id="totalExams">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Results Stored</h3>
+        <p id="resultsStored">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Latest Exam</h3>
+        <p id="latestExam">Not Available</p>
+    </div>
+
+</section>
+
+<section class="dashboard-actions">
+
+    <button id="addExamBtn">➕ Add New Exam</button>
+
+    <button id="historyBtn">📋 Result History</button>
+
+    <button id="backupBtn">💾 Export Backup</button>
+
+    <button id="restoreBtn">📂 Import Backup</button>
+
+    <input
+    type="file"
+    id="backupFile"
+    accept=".json"
+    style="display:none;">
+
+    <button id="logoutBtn">🚪 Logout</button>
+
+</section>
+
+<section class="result-entry">
+
+    <h2>Add Mock Examination Result</h2>
+
+    <form id="resultForm">
+<div class="form-group">
+    <label>Exam Name</label>
+    <input type="text" id="examName" placeholder="e.g. Unit Test 1">
+</div>
+
+<div class="form-group">
+    <label>Exam Date</label>
+    <input type="date" id="examDate">
+</div>
+
+<div class="form-group">
+    <label>Maximum Marks</label>
+
+    <select id="maxMarks">
+        <option value="50">50</option>
+        <option value="100" selected>100</option>
+    </select>
+</div>
+  
+<h3>Student Details</h3>
+
+<input type="text" id="studentName" placeholder="Student Name">
+<input type="text" id="registerNumber" placeholder="Register Number">
+<input type="text" id="studentClass" placeholder="Class">
+<input type="text" id="studentSection" placeholder="Section">
+
+<h3>Exam Details</h3>
+
+<div class="form-group">
+
+<label>Subject</label>
+
+<select id="subject">
+
+<option value="Tamil">Tamil</option>
+
+<option value="English">English</option>
+
+<option value="Mathematics">Mathematics</option>
+
+<option value="Science">Science</option>
+
+<option value="Social Science">Social Science</option>
+
+</select>
+
+</div>
+
+<div class="form-group">
+
+<label>Obtained Marks</label>
+
+<input
+type="number"
+id="marks"
+placeholder="Enter Marks">
+
+</div>
+
+<button id="saveResultBtn">Save Result</button>
+
+
+
+</form>
+<h3>Search Student</h3>
+
+<input
+    type="text"
+    id="searchRegister"
+    placeholder="Enter Register Number">
+
+<button id="searchBtn">
+    Search
+</button>
+<h3>Saved Results</h3>
+
+<table id="resultsTable" border="1" width="100%">
+    <thead>
+        <tr>
+            <th>Register No</th>
+            <th>Student Name</th>
+            <th>Total</th>
+            <th>Percentage</th>
+            <th>Result</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="resultsBody">
+
+    </tbody>
+</table>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
